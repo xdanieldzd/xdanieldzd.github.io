@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Testing"
-date:   2016-09-23 04:15:00
+date:   2016-09-23 04:15:00 +0200
 categories: update
 ---
 Here we go? Possibly. Well, I actually don't know. My old site, _DigitalZero Domain_, disappeared off the face of the Internet over the last couple of days or so, presumably because my free hosting finally pulled the plug on it, after who knows how many years of it just lingering on the net. The hosting, I mean, which still dated back to the days of the FWB, so back to 2005 or thereabouts.
