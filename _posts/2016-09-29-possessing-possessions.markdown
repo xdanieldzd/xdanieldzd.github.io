@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Possessing Possessions"
-date:   2016-09-29 02:46:00
+date:   2016-09-29 02:46:00 +0200
 categories: tech
 ---
 What is it with me and keeping old computer hardware? And I don't mean hardware that's just slightly out of date, nor things that would commonly be considered vintage or retro. I'm thinking of Pentium II- or III-era PCs and their components: these are way out of date for any real day-to-day usage, but also aren't really pieces of equipment that might be nice to have for nostalgia reasons, for running old DOS or Windows 9x games. So, what's the point?
