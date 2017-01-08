@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A G4 Journey"
-date:   2017-01-08 01:46:00 +0300
+date:   2017-01-08 01:46:00 +0100
 categories: tech
 ---
 It has been roughly six months since the beginning of this journey -- and I certainly didn't intend for it to take this long. It's a journey of obstacles, of tinkering and mending, and, in the end, of something that could be called "joy". To make this short, a journey of finding and putting together a working [Power Mac G4](https://en.wikipedia.org/wiki/Power_Mac_G4).
