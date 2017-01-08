@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "A G4 Journey"
+date:   2017-01-08 01:46:00 +0200
+categories: tech
+---
+It has been roughly six months since the beginning of this journey -- and I certainly didn't intend for it to take this long. It's a journey of obstacles, of tinkering and mending, and, in the end, of something that could be called "joy". To make this short, a journey of finding and putting together a working [Power Mac G4](https://en.wikipedia.org/wiki/Power_Mac_G4).
+
+Where do we start? Probably with this, as far as I could tell, rather inexpensive Power Mac G4 I saw on eBay in July 2016. Listed as having a 466 MHz CPU, a quick check of Wikipedia made it clear that this machine was the smallest configuration of the _Digital Audio_ model. In addition, it was said to have 256 MB RAM, a 30 GB hard disk and a CD-RW drive, and was priced at just shy of 30€ -- well, plus 15€ shipping. It was sent out and arrived rather quickly, but sadly not in one piece. The transparent stand and handle on the back of the machine were cracked, and the chassis as a whole was bent. The electronics survived intact and the machine fired right up when turned on, but the damage made it unsightly at best. I opened a case against the seller, who insisted he had packaged it properly, had shipped Macs before and never had them get damaged in the process, but who eventually gave me a 10€ discount.
+
+I decided to keep my eyes open for a replacement case for the machine, or even another, cheap system. However, not every Power Mac G4 case fits every Power Mac G4 logic board. Basically, as far as I understand it, _PCI Graphics_ models have their own chassis, while the _AGP Graphics_ and _Gigabit Ethernet_ models both use basically the same chassis, and _Digital Audio_ and _Quicksilver_ models, although very different externally, have mostly the same port cutouts and mounting points for logic board and power supply. So, this meant that I had to look out for either a _Digital Audio_ or _Quicksilver_ case -- or just replace my damaged 466 MHz machine altogether.
+
+In the meantime, I had a bit of an excursion in the world of [reflashing PC video cards for Mac use](http://themacelite.wikidot.com/). Official, Mac-specific video cards cost roughly two to three times as much as their common PC counterparts, so it isn't uncommon to purchase a cheaper PC version of, for example, a R200 or R300 series Radeon card, flash Mac-compatible firmware onto it, then -- depending on the target system -- disconnect two specific traces to the AGP connector on the card, and use it like a normal Mac variant. After accidentally frying an old GeForce FX 5200 I had lying around by incorrectly (and literally) cutting the aforementioned traces on the card, I ended up purchasing a much easier to flash and modify Radeon 9800 Pro. This modification ended in success, so I now had a very nice indeed video card for whatever exactly my future G4 would be.
+
+One month later, in August 2016, I came across another inexpensive G4 machine. As far as I can remember, it was not very well documented, unlike the 466 MHz machine's listing, so all I had to go off of was the photos the seller had provided -- and these were rather interesting. It was a Gigabit Ethernet model, but appeared to have a third party CPU upgrade, instead of an original Apple board -- judging from photos and [articles about these upgrades](http://beta.ivc.no/wiki/index.php/PowerMac_G4_Upgrades), it looked very similar to some once sold by companies like OWC and FastMac. I ended up bidding 20€ on it, not really expecting to win the auction -- but I did. This one was sent out rather quickly, too, but -- while arriving in one piece -- it arrived roughly two weeks after the end of the auction. As it turned out, either the seller or the shipping service messed up by dropping the last digit of my address.
+
+Once this second system did arrive, I immediately hooked the machine up and turned it on. At which point it refused to start. Some experimentation later, I eventually got it to boot up into Mac OS X and checked the System Profiler to figure out what exactly was inside the system, and possibly what's wrong with it. Which is where I noticed that, on the last failed boot, the system's diagnostics detected an error with the CPU's external, L3 cache. More and more troubleshooting and experimentation later, it became clearer and clearer that this _Giga Designs G-Celerator M5-1012G_ -- a 1 GHz CPU, by default clocked at 1.2 GHz, with 256 KB L2 cache and 2 MB L3 cache -- was, basically, broken. The L3 cache just wouldn't want to work, no matter what I did, and to get the system to start up despite this, the PMU, or Power Management Unit, has to be reset using a tiny button on the logic board, _then_ the power button has to be pressed almost immediately after this.
+
+By this point, I had more or less given up on this whole G4 Power Mac business. I could keep the unsightly Digital Audio model, go back to, say, my slower, slightly iffy iMac for anything Mac-related -- as long as it only required a 350 MHz G3 and Mac OS 9 --, or hope for another stroke of luck on eBay. And, guess what? The stroke of luck eventually came, in early December 2016.
+
+I noticed a non-working Quicksilver model, not far from the end of its auction, with only one bid. The case looked fine from the two small photos the seller had posted, it was listed as being 867 MHz, with a 80 GB hard disk and 1.5 GB RAM. It also appeared to be missing a video card, which wasn't a big deal since I already had my Radeon 9800 Pro. I put in a small bid, hoping that the other bidder wasn't too adamant about getting the system because it was defective. I was outbid. I bid again. Rinse and repeat for a bit. But eventually, I won -- and probably through extreme luck because, apparently, the other bidder put in a bid of 17€ at the moment the auction ended, which was exactly the same as my maximum bid. Thus, if they had been just a bit quicker and put in a bid higher than 17€, they would've won instead.
+
+Anyway, with the purchase out of the way, the system was sent out and arrived here a few days later. As described in the auction, it didn't start up, the fans didn't even spin, but when I looked inside the case -- I have to admit, I nearly lost it. This didn't have a standard 867 MHz CPU inside -- instead, a 1.6 GHz _Sonnet Encore/ST G4_, with its distinct purple heatsink, could be seen mounted to the board! This was a completely unexpected and amazing find, especially considering I paid a total of 35€ for the system! At the time of this writing, there is a single 1.6 GHz Sonnet G4 upgrade available on eBay, in an auction ending in 20 hours, currently at £47 or ca. 55€. Of course, I had not yet checked if the CPU was still working -- who knows what kind of calamity had befallen this poor Quicksilver.
+
+I looked up more details on these Sonnet upgrades, found out that you need to install a firmware patch for these cards to work correctly, then downloaded and installed the patch on my original Digital Audio system. Next, I carefully removed its CPU and heatsink, and put the Sonnet board in. And... what can I say? Lo and behold, the system booted up -- no problems listed in the System Profiler, just a single 1.6 GHz CPU, with 512 KB L2 cache, no L3 cache.
+
+With the CPU confirmed working, the Quicksilver's power supply likely dead, and -- most importantly -- the Digital Audio's logic board and power supply mountable inside the Quicksilver's case, it was time to put everything together. Time for a new Power Mac G4 to arise from the ashes of three battered and beaten ones.
+
+This is it.
+
+{:refdef: style="text-align: center;"}
+[![Power Mac G4 "Not-QS" 1]({{ site.url }}/assets/IMG_20170107_224603_thumb.png)]({{ site.url }}/assets/IMG_20170107_224603.png)
+[![Power Mac G4 "Not-QS" 2]({{ site.url }}/assets/IMG_20170107_224844_thumb.png)]({{ site.url }}/assets/IMG_20170107_224844.png)
+{: refdef}
+
+This is my Power Mac G4 "Not-Quicksilver".
+
+- Sonnet Encore/ST G4, 1.6 GHz (PowerPC G4 7447A)
+- 1.5 GB PC133 SD-RAM (3x 512 MB)
+- ATI Radeon 9800 Pro, 128 MB RAM (+ aftermarket heatsink and fan)
+- Seagate HDD ST380215A, 80 GB IDE
+- Seagate HDD ST340810A, 40 GB IDE
+- HP DVD Writer dvd640c, IDE
+- NEC USB 2.0 PCI card
+- Stealth Serial Port
+- Mac OS X Tiger, v10.4.11
+
+...well, to be exact, it's only _almost_ good to go. While the PRAM battery is still functional, I am going to replace it just because it's already 13 or so years old. Additionally, the 80 GB hard disk is starting to make some not-so-healthy noises, which is why I'm probably going to look into another realm of firmware flashing, namely that of PCI SATA cards. Cards with a certain chipset can easily be flashed for Mac use, including being bootable, and with no size limitations, so I am thinking of just putting in a 250 GB SATA hard disk using one of these, which will then become the system's Mac OS X drive. The 40 GB hard disk, currently just holding downloads and documents, will then be used to host a fresh Mac OS 9 setup for classic applications and games. Less urgent are replacements for the case fan, the CPU upgrade's fan and possibly the PSU fan (as well as somehow hooking up the original Quicksilver CPU fan, which can be seen to the right of the CPU in the photo above), and replacing the PCI USB 2.0 card, on which only one USB port seems to still work reliably.
+
+And finally...
+
+{:refdef: style="text-align: center;"}
+[![G4 Leftovers]({{ site.url }}/assets/IMG_20170107_225028_thumb.png)]({{ site.url }}/assets/IMG_20170107_225028.png)
+{: refdef}
+
+There's the leftovers, so to speak -- the damaged Digital Audio chassis, the Gigabit Ethernet with its broken CPU upgrade, the Quicksilver logic board in unknown condition and the faulty Quicksilver power supply, as well as several cards and a few optical drives. Some of these things will likely be sold, some of the cards especially, the others will be stored as spares or reused in other systems -- I could probably put the CD-RW drive into my Power Macintosh 4400, for example.
+
+Thus, my G4 journey is pretty much at its end. Aside from the aforementioned hard disk changes, I am now in a place where I can just enjoy playing around with the machine, with applications and games and the like, instead of having to troubleshoot it, or find more replacement parts, or anything else of the sort.
